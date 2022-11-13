@@ -12,7 +12,7 @@ namespace Calculadora
         {
             int menu;
 
-            Console.WriteLine("-------------CALCULADORA-----------");
+            Console.WriteLine("-------------CALCULADORA1-----------");
 
             Console.WriteLine("Digite 1 para soma");
             Console.WriteLine("Digite 2 para subtração");
