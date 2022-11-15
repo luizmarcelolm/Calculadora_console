@@ -53,6 +53,31 @@ namespace Calculadora
             Console.WriteLine($"A soma de {n1} + {n2} = {resultado}");
             Console.WriteLine("");
 
+            int menu;
+
+            Console.WriteLine("-------------CALCULADORA-----------");
+            Console.WriteLine("");
+            Console.WriteLine("Digite 1 para soma");
+            Console.WriteLine("Digite 2 para subtração");
+           
+            Console.WriteLine("");
+            Console.Write("OPÇÃO: ");
+
+            while (!(int.TryParse(Console.ReadLine(), out menu)))
+            {
+                Console.Write("Opção incorreta!!! ");
+            }
+
+            switch (menu)
+            {
+                case 1: divisão(); break;
+              
+                case 5: Console.WriteLine("Aplicação encerrada!!!"); break;
+                default: Console.WriteLine("Opção inválida!!!"); break;
+            }
+            Console.ReadKey();
+
+
         }
         static void subtração()
         {
