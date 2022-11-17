@@ -8,10 +8,10 @@ namespace Calculadora
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             int menu;
-
+            Console.Clear();
             Console.WriteLine("-------------CALCULADORA-----------");
             Console.WriteLine("");
             Console.WriteLine("Digite 1 para soma");
@@ -21,12 +21,13 @@ namespace Calculadora
             Console.WriteLine("Digite 5 para sair ");
             Console.WriteLine("");
             Console.Write("OPÇÃO: ");
-
+            
             while (!(int.TryParse(Console.ReadLine(), out menu)))
             {
                 Console.Write("Opção incorreta!!! ");
             }
 
+            Console.WriteLine("");
             switch (menu)
             {
                 case 1: soma(); break;
@@ -41,7 +42,7 @@ namespace Calculadora
         static void soma()
         {
             Console.Clear();
-            Console.WriteLine("---------SOMA-------------- ");
+            Console.WriteLine("-----------SOMA----------- ");
             Console.WriteLine("");
             Console.Write("Digite primeiro número: ");
             int n1 = int.Parse(Console.ReadLine());
@@ -55,10 +56,10 @@ namespace Calculadora
 
             int menu;
 
-            Console.WriteLine("-------------CALCULADORA-----------");
+            Console.WriteLine("----------OPÇÃO-----------");
             Console.WriteLine("");
-            Console.WriteLine("Digite 1 para soma");
-            Console.WriteLine("Digite 2 para subtração");
+            Console.WriteLine("Digite 1 voltar ao menu");
+            Console.WriteLine("Digite 2 para sair");
            
             Console.WriteLine("");
             Console.Write("OPÇÃO: ");
@@ -70,9 +71,9 @@ namespace Calculadora
 
             switch (menu)
             {
-                case 1: divisão(); break;
+                case 1: Main(); break;
               
-                case 5: Console.WriteLine("Aplicação encerrada!!!"); break;
+                case 2: Console.WriteLine("Aplicação encerrada!!!"); break;
                 default: Console.WriteLine("Opção inválida!!!"); break;
             }
             Console.ReadKey();
@@ -92,12 +93,31 @@ namespace Calculadora
             int resultado = n1 - n2;
             Console.WriteLine("");
             Console.WriteLine($"A subtração de {n1} - {n2} = {resultado}");
-            Console.WriteLine($"A soma de {n1} + {n2} = {resultado}");
-            Console.WriteLine("Digite 6 para fazer novo calculo");
-            Console.WriteLine("Digite 7 para voltar ao menu");
-            Console.WriteLine("Digite 8 para sair");
             Console.WriteLine("");
-            Console.Write("Opção: ");
+
+            int menu;
+
+            Console.WriteLine("----------OPÇÃO-----------");
+            Console.WriteLine("");
+            Console.WriteLine("Digite 1 voltar ao menu");
+            Console.WriteLine("Digite 2 para sair");
+
+            Console.WriteLine("");
+            Console.Write("OPÇÃO: ");
+
+            while (!(int.TryParse(Console.ReadLine(), out menu)))
+            {
+                Console.Write("Opção incorreta!!! ");
+            }
+
+            switch (menu)
+            {
+                case 1: Main(); break;
+
+                case 2: Console.WriteLine("Aplicação encerrada!!!"); break;
+                default: Console.WriteLine("Opção inválida!!!"); break;
+            }
+            Console.ReadKey();
         }
 
         static void multiplicação()
@@ -113,12 +133,31 @@ namespace Calculadora
             int resultado = n1 * n2;
             Console.WriteLine("");
             Console.WriteLine($"A multiplicação de {n1} * {n2} = {resultado}");
-            Console.WriteLine($"A soma de {n1} + {n2} = {resultado}");
-            Console.WriteLine("Digite 6 para fazer novo calculo");
-            Console.WriteLine("Digite 7 para voltar ao menu");
-            Console.WriteLine("Digite 8 para sair");
             Console.WriteLine("");
-            Console.Write("Opção: ");
+
+            int menu;
+
+            Console.WriteLine("----------OPÇÃO-----------");
+            Console.WriteLine("");
+            Console.WriteLine("Digite 1 voltar ao menu");
+            Console.WriteLine("Digite 2 para sair");
+
+            Console.WriteLine("");
+            Console.Write("OPÇÃO: ");
+
+            while (!(int.TryParse(Console.ReadLine(), out menu)))
+            {
+                Console.Write("Opção incorreta!!! ");
+            }
+
+            switch (menu)
+            {
+                case 1: Main(); break;
+
+                case 2: Console.WriteLine("Aplicação encerrada!!!"); break;
+                default: Console.WriteLine("Opção inválida!!!"); break;
+            }
+            Console.ReadKey();
         }
 
         static void divisão()
@@ -134,12 +173,31 @@ namespace Calculadora
             int resultado = n1 / n2;
             Console.WriteLine("");
             Console.WriteLine($"A divisão de {n1} / {n2} = {resultado}");
-            Console.WriteLine($"A soma de {n1} + {n2} = {resultado}");
-            Console.WriteLine("Digite 6 para fazer novo calculo");
-            Console.WriteLine("Digite 7 para voltar ao menu");
-            Console.WriteLine("Digite 8 para sair");
             Console.WriteLine("");
-            Console.Write("Opção: ");
+
+            int menu;
+
+            Console.WriteLine("----------OPÇÃO-----------");
+            Console.WriteLine("");
+            Console.WriteLine("Digite 1 voltar ao menu");
+            Console.WriteLine("Digite 2 para sair");
+
+            Console.WriteLine("");
+            Console.Write("OPÇÃO: ");
+
+            while (!(int.TryParse(Console.ReadLine(), out menu)))
+            {
+                Console.Write("Opção incorreta!!! ");
+            }
+
+            switch (menu)
+            {
+                case 1: Main(); break;
+
+                case 2: Console.WriteLine("Aplicação encerrada!!!"); break;
+                default: Console.WriteLine("Opção inválida!!!"); break;
+            }
+            Console.ReadKey();
         }
 
     }
